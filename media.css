@@ -39,7 +39,7 @@
     .layout .sidebar .side3 h3 {
         display: block;
     }
-    
+
     .layout .sidebar .side2 ul li span:last-child,
     .layout .sidebar .side3 button span {
         display: inline;
@@ -117,5 +117,76 @@
             "budget budget budget  income-analysis income-analysis income-analysis payment payment payment"
             "budget budget budget transaction-summery transaction-summery transaction-summery  payment payment payment"
             "budget budget budget transaction-summery transaction-summery transaction-summery  payment payment payment";
+    }
+
+    .layout .dashboard .activity .sec1 .sec1-content::after {
+        content: "حساب";
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        font-size: .75rem;
+        font-weight: 600;
+        line-height: 1rem;
+        color: #155DFC;
+
+    }
+
+    .layout .dashboard .activity .sec2 .sec1-content::after {
+        content: "بطاقة";
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        font-size: .75rem;
+        font-weight: 600;
+        line-height: 1rem;
+        color: #00A63E;
+
+    }
+
+
+    .layout .dashboard .profile-section .profile-content::before {
+        content: "";
+        width: .625rem;
+        height: .625rem;
+        position: absolute;
+        border-radius: .3125rem;
+        top: 38%;
+        left: -55%;
+        background-color: #3ED67A;
+        z-index: 100;
+    }
+
+    .layout .dashboard .profile-section .profile-content::after {
+        content: "متصل";
+        width: 5rem;
+        padding: .3125rem .625rem;
+        position: absolute;
+        border-radius: .625rem;
+        text-align: left;
+        top: 20%;
+        right: 130%;
+        border: #bcf0d1 solid .0625rem;
+        color: #32754e;
+        background-color: #F0FDF4;
+        font-size: .875rem;
+
+    }
+
+    .layout .dashboard .profile-notification::before {
+        content: "2";
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: .3125rem;
+        background-color: red;
+        border-radius: .625rem;
+        color: white;
+        position: absolute;
+        top: .5rem;
+        right: 18%;
+        font-size: .75rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
