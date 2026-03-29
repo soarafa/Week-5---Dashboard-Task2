@@ -1,0 +1,121 @@
+/* Mobile-first approach: default styles are in style.css */
+
+/* Tablet Layout: min-width 48rem */
+@media screen and (min-width: 48rem) {
+    .layout {
+        grid-template-columns: 15.625rem 1fr;
+    }
+
+    .layout .dashboard {
+        grid-template-columns: 1fr 1fr;
+        gap: .625rem;
+        grid-template-areas:
+            "profile-section profile-section"
+            "current-balance income"
+            "expenses activity"
+            "bills transaction"
+            "budget income-analysis"
+            "payment transaction-summery";
+    }
+
+    .sidebar {
+        width: 250px;
+        display: block;
+        padding: 0;
+        border-left: none;
+    }
+
+    .layout .sidebar .side1,
+    .layout .sidebar .side3 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .625rem;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1.875rem;
+    }
+
+    .layout .sidebar .side1 .content,
+    .layout .sidebar .side3 h3 {
+        display: block;
+    }
+    
+    .layout .sidebar .side2 ul li span:last-child,
+    .layout .sidebar .side3 button span {
+        display: inline;
+    }
+
+    .layout .sidebar .side1 .icon {
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: .9375rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .layout .sidebar .side1 .icon svg {
+        width: 1.50rem;
+    }
+
+    .layout .sidebar .side2 ul {
+        display: block;
+        padding: 0;
+    }
+
+    .layout .sidebar .side2 ul li {
+        width: auto;
+        display: flex;
+        gap: .625rem;
+        padding: .625rem;
+        margin-block: .625rem;
+        border-radius: 0;
+        justify-content: flex-start;
+        box-sizing: content-box;
+    }
+
+    .layout .sidebar .side2 ul li:first-child {
+        border: .0625rem solid #cbcdd1;
+        background-color: #EFF6FF;
+        color: var(--main-color);
+        border-radius: .9375rem;
+        padding: .625rem;
+        width: 90%;
+    }
+
+    .layout .sidebar .side2 ul li:not(:first-child):hover {
+        background-color: #cbcdd128;
+        border-radius: .9375rem;
+        width: 90%;
+        transform: scale(1.03);
+    }
+
+    .layout .sidebar .side2 ul li svg {
+        width: 1rem;
+        height: auto;
+    }
+
+    .layout .sidebar .side3 {
+        padding: 0 2.5rem;
+        font-size: .875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        color: rgb(17, 24, 39);
+    }
+}
+
+/* Desktop Layout: min-width 66.5rem */
+@media screen and (min-width: 66.5rem) {
+    .layout .dashboard {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: .625rem;
+        grid-template-areas:
+            "profile-section profile-section profile-section profile-section profile-section profile-section profile-section profile-section profile-section"
+            "current-balance current-balance current-balance income income income expenses expenses expenses"
+            "activity activity activity transaction transaction transaction transaction transaction transaction "
+            "bills bills bills transaction transaction transaction transaction transaction transaction "
+            "budget budget budget  income-analysis income-analysis income-analysis payment payment payment"
+            "budget budget budget  income-analysis income-analysis income-analysis payment payment payment"
+            "budget budget budget transaction-summery transaction-summery transaction-summery  payment payment payment"
+            "budget budget budget transaction-summery transaction-summery transaction-summery  payment payment payment";
+    }
+}
